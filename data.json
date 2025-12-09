@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "巷口乾麵",
+        "type": "麵食",
+        "minPrice": 45,
+        "maxPrice": 80
+    },
+    {
+        "id": 2,
+        "name": "豪華便當店",
+        "type": "便當",
+        "minPrice": 90,
+        "maxPrice": 150
+    },
+    {
+        "id": 3,
+        "name": "快樂漢堡",
+        "type": "速食",
+        "minPrice": 120,
+        "maxPrice": 200
+    },
+    {
+        "id": 4,
+        "name": "老王牛肉麵",
+        "type": "麵食",
+        "minPrice": 130,
+        "maxPrice": 180
+    },
+    {
+        "id": 5,
+        "name": "平價鐵板燒",
+        "type": "鐵板燒",
+        "minPrice": 150,
+        "maxPrice": 300
+    },
+    {
+        "id": 6,
+        "name": "白鬍子",
+        "type": "牛排",
+        "minPrice": 150,
+        "maxPrice": 500
+    }
+]

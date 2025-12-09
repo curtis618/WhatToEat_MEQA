@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 晚餐幫手</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 AI 晚餐幫手</h1>
+            <p>不知道吃什麼？讓我幫你決定！</p>
+        </header>
+
+        <section class="card selection-area">
+            <h2>1. 設定條件</h2>
+            <div class="filters">
+                <div class="filter-group">
+                    <label>價格區間</label>
+                    <div class="price-inputs">
+                        <input type="number" id="filterMinPrice" placeholder="最低價" min="0">
+                        <span>~</span>
+                        <input type="number" id="filterMaxPrice" placeholder="最高價" min="0">
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <label>料理種類</label>
+                    <select id="filterType">
+                        <option value="all">全部種類</option>
+                        <!-- 選項將由 JS 動態產生 -->
+                    </select>
+                </div>
+            </div>
+            <button id="pickBtn" class="btn primary-btn">✨ 幫我選一個！ ✨</button>
+            
+            <div id="resultArea" class="result-area hidden">
+                <h3>AI 推薦你吃：</h3>
+                <div id="resultContent" class="result-content"></div>
+            </div>
+        </section>
+
+        <section class="card management-area">
+            <h2>2. 餐廳資料庫</h2>
+            
+            <div class="add-form">
+                <h3>新增餐廳</h3>
+                <div class="form-row">
+                    <input type="text" id="newName" placeholder="餐廳名稱" required>
+                    <input type="text" id="newType" placeholder="種類 (例: 拉麵、便當)" list="typeList" required>
+                    <datalist id="typeList">
+                        <!-- 建議選項 -->
+                    </datalist>
+                    <input type="number" id="newMinPrice" placeholder="最低價" min="0">
+                    <input type="number" id="newMaxPrice" placeholder="最高價" min="0">
+                    <button id="addBtn" class="btn secondary-btn">新增</button>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table id="restaurantTable">
+                    <thead>
+                        <tr>
+                            <th>餐廳名稱</th>
+                            <th>種類</th>
+                            <th>價格區間</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- 資料將由 JS 動態產生 -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
